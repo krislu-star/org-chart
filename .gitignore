@@ -1,0 +1,8 @@
+.DS_Store
+.claude/
+files/
+HR操作手冊.md
+*.xlsx
+*.csv
+*.pdf
+*.gs

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HR 人員管理台 — 操作說明</title>
+<style>
+  :root{
+    --accent:#3d5a4c; --accent2:#4d6f5d; --ink:#23302a; --ink2:#41544a; --ink3:#7a8a82;
+    --bg:#f4f6f5; --card:#fff; --line:#e3e8e5;
+    --ok:#3d8a5a; --probation:#c98a1e; --tbc:#8a5ec9; --tbh:#c0392b; --parental:#2e7aa8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"PingFang TC","Microsoft JhengHei",system-ui,-apple-system,sans-serif;
+    font-size:17px; line-height:1.7; -webkit-text-size-adjust:100%;
+  }
+  /* 頂部 */
+  header{
+    background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff;
+    padding:34px 22px 30px;
+  }
+  .wrap{max-width:720px; margin:0 auto;}
+  header h1{margin:0; font-size:clamp(24px,5vw,34px); font-weight:800; letter-spacing:.5px;}
+  header p{margin:8px 0 0; font-size:clamp(14px,3.4vw,17px); opacity:.92;}
+  .cta{
+    display:inline-block; margin-top:20px; background:#fff; color:var(--accent);
+    text-decoration:none; font-weight:800; font-size:clamp(15px,3.6vw,18px);
+    padding:13px 24px; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,.15);
+  }
+  .cta:active{transform:translateY(1px);}
+  /* 內容 */
+  main{padding:8px 16px 40px;}
+  section{
+    background:var(--card); border-radius:16px; padding:22px 20px; margin:18px 0;
+    box-shadow:0 1px 4px rgba(0,0,0,.05);
+  }
+  h2{
+    margin:0 0 14px; font-size:clamp(19px,4.4vw,24px); color:var(--accent);
+    display:flex; align-items:center; gap:10px;
+  }
+  h2 .n{
+    flex:0 0 auto; width:34px; height:34px; border-radius:50%;
+    background:var(--accent); color:#fff; font-size:17px; font-weight:800;
+    display:flex; align-items:center; justify-content:center;
+  }
+  p{margin:0 0 14px;} p:last-child{margin-bottom:0;}
+  b{color:var(--ink);}
+  .step{display:flex; gap:13px; margin:0 0 14px; align-items:flex-start;}
+  .step .num{
+    flex:0 0 auto; width:30px; height:30px; border-radius:50%; background:var(--accent2); color:#fff;
+    font-size:16px; font-weight:800; display:flex; align-items:center; justify-content:center; margin-top:2px;
+  }
+  .box{background:#eef3f0; border-radius:12px; padding:14px 16px; margin:0 0 14px;}
+  .tip{background:#e9f3ec; border-left:5px solid var(--ok); border-radius:9px; padding:13px 16px; margin:0 0 14px;}
+  .warn{background:#fbf3e3; border-left:5px solid var(--probation); border-radius:9px; padding:13px 16px; margin:0 0 14px;}
+  .btn,.ghost,.danger{display:inline-block; border-radius:8px; padding:3px 12px; font-weight:700; font-size:.92em; white-space:nowrap;}
+  .btn{background:var(--accent); color:#fff;}
+  .ghost{background:#fff; border:2px solid #b9cabf; color:var(--accent);}
+  .danger{background:#fff; border:2px solid #e3b6ae; color:var(--tbh);}
+  .pills{display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 14px;}
+  .pill{display:inline-block; color:#fff; border-radius:20px; padding:4px 14px; font-size:.92em; font-weight:600;}
+  .s1{background:var(--ok);} .s2{background:var(--probation);} .s3{background:var(--tbc);}
+  .s4{background:var(--tbh);} .s5{background:var(--parental);}
+  ul{margin:0 0 14px; padding-left:22px;} li{margin-bottom:8px;}
+  .muted{color:var(--ink3);}
+  footer{max-width:720px; margin:0 auto; padding:0 20px 40px; color:var(--ink3); font-size:14px; text-align:center;}
+  /* 大螢幕：兩欄更好讀（選用，單欄也 OK） */
+  @media(min-width:860px){
+    body{font-size:18px;}
+    main{padding-top:14px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>人員管理台 · 操作說明</h1>
+    <p>新增 / 修改 / 刪除同仁資料，組織圖與試用期提醒會自動同步。<br>手機、電腦都能看，照著做就好 👍</p>
+    <a class="cta" href="hr-admin.html">👉 開啟人員管理台</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2><span class="n">1</span>怎麼打開</h2>
+    <p>用<b>公司 Google 帳號</b>登入後，按上面的「<b>開啟人員管理台</b>」即可。建議在手機按「<b>分享 → 加入主畫面</b>」，下次點圖示就能進。</p>
+    <div class="tip">打開後會看到<b>同仁名單</b>，有搜尋框和「＋ 新增人員」。改完資料，組織圖會自動更新。</div>
+    <div class="box">你<b>完全不用</b>碰原本那張複雜的 Google 試算表，所有事情在這個畫面點一點就好。</div>
+  </section>
+
+  <section>
+    <h2><span class="n">2</span>新增一位同仁</h2>
+    <div class="step"><div class="num">1</div><div>按右上角 <span class="btn">＋ 新增人員</span></div></div>
+    <div class="step"><div class="num">2</div><div><b>選部門 / 組</b>，再填<b>姓名</b>、選<b>狀態</b>、填<b>到職日</b>、填 <b>Email</b>。</div></div>
+    <div class="step"><div class="num">3</div><div>按 <span class="btn">儲存</span>，完成！</div></div>
+    <div class="tip">「上層、職等、欄位位置」這些<b>系統會自動處理</b>，你不用管。</div>
+    <div class="warn">姓名是<b>必填</b>。Email 只存內部、<b>不會公開</b>，可以放心填。</div>
+  </section>
+
+  <section>
+    <h2><span class="n">3</span>修改 / 刪除</h2>
+    <p><b>要修改</b>：在那個人那一列按 <span class="ghost">改</span> → 改完按儲存。</p>
+    <p><b>要刪除</b>：按 <span class="danger">刪</span> → 確認。</p>
+    <div class="box">常見的修改：<br>• 試用 → 正式：把<b>狀態</b>改成「在職」<br>• 離職：按「刪」<br>• 換部門：改「部門 / 組」那一欄</div>
+    <div class="warn">有些人（主管、組長）旁邊<b>沒有「刪」</b>、部門也<b>不能改</b>。這是<b>正常的保護</b>，避免不小心弄壞組織圖。需要主管異動時，請找系統管理員。</div>
+  </section>
+
+  <section>
+    <h2><span class="n">4</span>狀態怎麼選</h2>
+    <p>狀態只有這幾種，下拉直接選：</p>
+    <div class="pills">
+      <span class="pill s1">在職</span><span class="pill s2">試用期</span><span class="pill s3">待確認</span>
+      <span class="pill s4">待招募</span><span class="pill s5">育嬰留停</span>
+    </div>
+    <div class="box">組織圖會依狀態<b>自動上色</b>，所以選對狀態很重要。</div>
+    <div class="tip"><b>到職日</b>填了就好，試用期到期日系統會自己算（到職日 + 89 天），<b>你不用記</b>。</div>
+  </section>
+
+  <section>
+    <h2><span class="n">5</span>系統會幫你把關</h2>
+    <div class="box"><b>新增到一半跳出「是不是兼任？」</b><br>表示已經有同名的人。如果是<b>同一個人</b>身兼兩個位子，按「確定」；不是的話按「取消」。</div>
+    <div class="box"><b>改名字時問「要不要一起改」</b><br>如果這個人兼好幾個位子，建議選「要」，這樣人數才不會算錯。</div>
+    <div class="tip">改完大約 <b>1～2 分鐘</b>，組織圖就會更新。</div>
+  </section>
+
+  <section>
+    <h2><span class="n">6</span>試用期提醒會自動寄</h2>
+    <p>系統會自動算每位試用期同仁的到期日（到職日 + 89 天），<b>到期前 14 天自動寄「考核訪談提醒」</b>給：</p>
+    <div class="box" style="font-size:1.05em;">📨 <b>本人 ＋ 直屬主管 ＋ 你（HR）</b></div>
+    <div class="tip">你<b>不用記、不用算、不用手動寄</b>，時間到系統自己會寄。</div>
+    <div class="box">就算系統某天出狀況沒寄到，會在之後幾天內<b>自動補寄</b>，<b>每人只寄一次</b>、不會重複也不會漏掉。</div>
+  </section>
+
+  <section>
+    <h2><span class="n">7</span>你會收到兩種系統信</h2>
+    <div class="box"><b>🗓️ 每週一：本週預告</b><br>這週預計要提醒誰。<b>就算這週沒人，也會寄一封</b>——代表系統正常運作。</div>
+    <div class="box"><b>📋 寄信日下午：今日結果</b><br>當天實際寄給了誰。</div>
+    <div class="warn"><b>⚠️ 看到紅字「應寄未寄」</b><br>表示有人該提醒卻沒寄成功，請<b>聯絡系統管理員（Kris）</b>處理。</div>
+    <div class="warn"><b>⚠️ 週一沒收到預告</b><br>可能系統出問題了，也請告訴 Kris。</div>
+    <div class="tip">一句話：<b>沒消息＝正常；看到紅字、或沒收到週一信＝找 Kris。</b></div>
+  </section>
+
+</main>
+
+<footer>
+  有任何看不懂的地方，截圖問系統管理員（Kris）就好 🙂<br>
+  StarCo 聯想感 · HR 人員管理台
+</footer>
+
+</body>
+</html>
